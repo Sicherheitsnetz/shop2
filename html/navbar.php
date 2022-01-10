@@ -19,23 +19,23 @@
 		<ul class="navbar-nav mr-auto">
 		    <li class="nav-item">
 				<?php if(isLoggedIn()):?>
-		    		<a class="nav-link" href="index.php/logout">Logout</a>
+		    		<a class="nav-link" href="/shop/index.php/logout">Logout</a>
 				<?php endif;?>
 				<?php if(!isLoggedIn()):?>
-		    		<a class="nav-link" href="index.php/login">Login</a>
+		    		<a class="nav-link" href="/shop/index.php/login">Login</a>
 				<?php endif;?>
 		    </li>
 		</ul>
 		</div>
 		<ul class="navbar-nav mr-auto">
 		    <li class="nav-item">
-		    <a class="nav-link" href="../index.php">Home</a>
+		    <a class="nav-link" href="/shop/index.php">Home</a>
    		    </li>
  		    <li class="nav-item">
-		    <a class="nav-link" href="index.php/prevord">Previous Orders</a>
+		    <a class="nav-link" href="/shop/index.php/prevord">Previous Orders</a>
 		    </li>
 		    <li class="nav-item active">
-		    <a class="nav-link" href="index.php/cart">Cart (<?=$CountCartItems ?>)</a>
+		    <a class="nav-link" href="/shop/index.php/cart">Cart (<?=$CountCartItems ?>)</a>
 	        </li>
 		</ul>
  		</div>

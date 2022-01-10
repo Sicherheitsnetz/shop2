@@ -33,7 +33,7 @@
     </div>
     <div class="row">
         <div class="col-11"></div>
-        <a href="http://localhost/index.php/checkout" class="btn btn-primary col-1 ">Buy</a>
+        <a href="/shop/index.php/checkout" class="btn btn-primary col-1 ">Buy</a>
     </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>

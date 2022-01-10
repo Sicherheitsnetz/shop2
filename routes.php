@@ -17,7 +17,7 @@ if(strpos($route,'/cart/add') !== false){   // wenn $route /cart/add enthält
 
     addProductToCart($userId,$productId);
 
-    header("Location: /index.php");    // zurück zur startseite
+    header("Location: /shop/index.php/cart");    // zurück zur startseite
     exit();
 }
 
@@ -60,11 +60,7 @@ if(strpos($route,'/login') !== false){
             $_SESSION['userId'] = (int)$userData['id'];
             moveCartProductsToLoggedinUser($olduserId,(int)$userData['id']);
             setcookie('userId',(int)$userData['id'],0,"/","",false,false);
-            $redirectTarget = 'http://localhost/index.php/cart';
-            if(isset($_SESSION['redirectTarget'])){
-                $redirectTarget = $_SESSION['redirectTarget'];
-            }
-            header("Location: ".$redirectTarget);
+            header("Location: /shop/index.php/cart");
             exit();
         }
     }
@@ -78,12 +74,12 @@ if(strpos($route,'/login') !== false){
 
 if(strpos($route,'/checkout') !== false){
     if(!isLoggedIn()){
-        $_SESSION['redirectTarget'] = 'http://localhost/index.php/cart';
-        header("Location: http://localhost/index.php/login");
+        $_SESSION['redirectTarget'] = '../index.php/cart';
+        header("Location: ../index.php/login");
     }
     else {
         buyCartProducts($userId);
-        header("Location: http://localhost/index.php");
+        header("Location: ../index.php");
     }
 }
 
@@ -92,7 +88,7 @@ if(strpos($route,'/logout') !== false){
     session_destroy();
     setcookie('userId', "", time()-3600);
     unset($_COOKIE["userId"]);
-    header('location: http://localhost/index.php');
+    header('location: ../index.php');
     
 }
 
